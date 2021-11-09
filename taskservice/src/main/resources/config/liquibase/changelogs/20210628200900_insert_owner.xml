@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="20210628200600-01" author="joao.calixto">
+        <sql>
+            INSERT INTO owner (id, name, email, birth_date, status_id) values (1, 'João Pedro', 'joao.calixto@basis.com.br', '2000-02-21', 1);
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
