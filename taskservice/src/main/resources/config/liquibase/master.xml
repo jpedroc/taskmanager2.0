@@ -6,6 +6,8 @@
 
     <include file="config/liquibase/changelogs/20210628191500_create_table_status_owner.xml"/>
     <include file="config/liquibase/changelogs/20210628191800_create_table_status_task.xml"/>
+    <include file="config/liquibase/changelogs/20211109180500_create_table_status_project.xml"/>
+    <include file="config/liquibase/changelogs/20211109180800_create_table_project.xml"/>
     <include file="config/liquibase/changelogs/20210628191900_create_table_owner.xml"/>
     <include file="config/liquibase/changelogs/20210628192600_create_table_task.xml"/>
     <include file="config/liquibase/changelogs/20210628193100_create_table_comment.xml"/>

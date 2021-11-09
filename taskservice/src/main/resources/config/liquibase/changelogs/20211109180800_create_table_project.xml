@@ -5,28 +5,37 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <changeSet id="20210628191900-01" author="joao.calixto">
-        <createTable tableName="owner">
+        <createTable tableName="project">
             <column name="id" type="int8">
                 <constraints nullable="false" primaryKey="true"/>
             </column>
-            <column name="name"  type="varchar(255)">
+            <column name="title"  type="varchar(150)">
                 <constraints nullable="false"/>
             </column>
-            <column name="email" type="varchar(150)">
+            <column name="description" type="varchar(300)">
                 <constraints nullable="false"/>
             </column>
-            <column name="birth_date" type="date"/>
+            <column name="code_number" type="varchar(30)">
+                <constraints nullable="false"/>
+            </column>
             <column name="status_id" type="int">
                 <constraints nullable="false"/>
             </column>
+            <column name="url_repository"  type="varchar(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="creation_date"  type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="conclusion_date" type="date"/>
         </createTable>
 
-        <createSequence sequenceName="seq_owner" incrementBy="1" startValue="1"/>
+        <createSequence sequenceName="seq_project" incrementBy="1" startValue="1"/>
     </changeSet>
 
     <changeSet id="20210628191900-02" author="joao.calixto">
-        <addForeignKeyConstraint baseTableName="owner" baseColumnNames="status_id" constraintName="fk_owner_status"
-                                 referencedTableName="status_owner"
+        <addForeignKeyConstraint baseTableName="project" baseColumnNames="status_id" constraintName="fk_project_status"
+                                 referencedTableName="status_project"
                                  referencedColumnNames="id"/>
     </changeSet>
 
