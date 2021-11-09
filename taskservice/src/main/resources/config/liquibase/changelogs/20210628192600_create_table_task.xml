@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="20210628192600-01" author="joao.calixto">
+        <createTable tableName="task">
+            <column name="id" type="int">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="title" type="varchar(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type" type="varchar(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="expected_start_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="expected_end_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="start_date" type="date"/>
+            <column name="end_date" type="date"/>
+            <column name="status_id" type="int"/>
+            <column name="owner_id" type="int"/>
+        </createTable>
+        
+        <createSequence sequenceName="seq_task" startValue="1" incrementBy="1"/>
+    </changeSet>
+
+    <changeSet id="20210628192600-02" author="joao.calixto">
+        <addForeignKeyConstraint baseTableName="task" baseColumnNames="status_id" constraintName="fk_task_status"
+                                 referencedTableName="status_task"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="20210628194300-02" author="joao.calixto">
+        <addForeignKeyConstraint baseTableName="task" baseColumnNames="owner_id" constraintName="fk_task_owner"
+                                 referencedTableName="owner"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+</databaseChangeLog>
