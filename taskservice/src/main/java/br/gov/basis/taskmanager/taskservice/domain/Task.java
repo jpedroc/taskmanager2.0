@@ -30,20 +30,14 @@ public class Task implements Serializable {
     @SequenceGenerator(name = "seq_task", sequenceName = "seq_task", allocationSize = 1)
     private Integer id;
 
+    @Column(name = "code_number", nullable = false)
+    private String codeNumber;
+
     @Column(name = "title", nullable = false)
     private String title;
 
     @Column(name = "description", nullable = false)
     private String description;
-
-    @Column(name = "type", nullable = false)
-    private String type;
-
-    @Column(name = "expected_start_date", nullable = false)
-    private LocalDate expectedStartDate;
-
-    @Column(name = "expected_end_date", nullable = false)
-    private LocalDate expectedEndDate;
 
     @Column(name = "start_date")
     private LocalDate startDate;
@@ -61,4 +55,8 @@ public class Task implements Serializable {
 
     @OneToMany(mappedBy = "task", cascade = CascadeType.ALL)
     private List<Comment> comments;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "project_id", nullable = false)
+    private Project project;
 }
