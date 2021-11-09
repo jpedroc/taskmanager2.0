@@ -9,6 +9,7 @@
         <module>taskbatch</module>
         <module>taskmail</module>
         <module>taskservice</module>
+        <module>taskhook</module>
     </modules>
 
     <properties>
