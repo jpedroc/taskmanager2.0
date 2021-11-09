@@ -14,15 +14,15 @@ services:
       - SPRING_ELASTICSEARCH_REST_URIS=http://taskservice-elasticsearch:9200
   taskservice-postgresql:
     extends:
-      file: postgresql.yml
+      file: ../../../../docker/containers/postgresql.yml
       service: taskservice-postgresql
   taskservice-elasticsearch:
     extends:
-      file: elasticsearch.yml
+      file: ../../../../docker/containers/elasticsearch.yml
       service: taskservice-elasticsearch
   jhipster-registry:
     extends:
-      file: jhipster-registry.yml
+      file: ../../../../docker/containers/jhipster-registry.yml
       service: jhipster-registry
     environment:
       - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_TYPE=native

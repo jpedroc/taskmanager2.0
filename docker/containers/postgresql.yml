@@ -6,7 +6,7 @@ services:
     #     - ~/volumes/jhipster/taskservice/postgresql/:/var/lib/postgresql/data/
     environment:
       - POSTGRES_USER=taskservice
-      - POSTGRES_PASSWORD=
+      - POSTGRES_PASSWORD=taskservice
       - POSTGRES_HOST_AUTH_METHOD=trust
     ports:
       - 5432:5432

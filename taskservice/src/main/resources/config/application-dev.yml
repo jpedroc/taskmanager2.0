@@ -54,7 +54,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:postgresql://localhost:5432/taskservice
     username: taskservice
-    password:
+    password: taskservice
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -62,6 +62,8 @@ spring:
     database-platform: io.github.jhipster.domain.util.FixedPostgreSQL10Dialect
     show-sql: true
   data:
+    jest:
+      uri: http://localhost:9200
     elasticsearch:
       properties:
         path:

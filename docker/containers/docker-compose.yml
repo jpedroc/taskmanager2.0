@@ -1,0 +1,19 @@
+version: '2'
+services:
+  taskmanager-postgres:
+    extends:
+      service: taskservice-postgresql
+      file: postgresql.yml
+    container_name: taskmanager-postgres
+
+  taskmanager-elasticsearch:
+    extends:
+      service: taskservice-elasticsearch
+      file: elasticsearch.yml
+    container_name: taskmanager-elasticsearch
+
+  taskmanager-registry:
+    extends:
+      service: jhipster-registry
+      file: jhipster-registry.yml
+    container_name: taskmanager-registry
