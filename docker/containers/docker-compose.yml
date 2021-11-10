@@ -17,3 +17,9 @@ services:
       service: jhipster-registry
       file: jhipster-registry.yml
     container_name: taskmanager-registry
+
+  taskmanager-redis:
+    extends:
+      service: redis
+      file: redis.yml
+    container_name: taskmanager-redis
