@@ -32,6 +32,14 @@ management:
       enabled: false
 
 spring:
+  cloud:
+    stream:
+      bindings:
+        close-tasks:
+          group: task
+          durableSubscription: true
+          destination: close-task
+          exchangeAutoDelete: false
   redis:
     host: localhost
   profiles:

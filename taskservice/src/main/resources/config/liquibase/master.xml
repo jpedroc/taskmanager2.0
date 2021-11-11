@@ -15,4 +15,5 @@
     <include file="config/liquibase/changelogs/20210628200900_insert_owner.xml"/>
     <include file="config/liquibase/changelogs/20210628201000_insert_status_task.xml"/>
     <include file="config/liquibase/changelogs/20210702185700_alter_table_comment.xml"/>
+    <include file="config/liquibase/changelogs/20211110185400_insert_status_task_archived.xml"/>
 </databaseChangeLog>

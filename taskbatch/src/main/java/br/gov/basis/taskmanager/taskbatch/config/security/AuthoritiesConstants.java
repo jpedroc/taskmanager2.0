@@ -1,4 +1,4 @@
-package br.gov.basis.taskmanager.taskbatch.security;
+package br.gov.basis.taskmanager.taskbatch.config.security;
 
 /**
  * Constants for Spring Security authorities.

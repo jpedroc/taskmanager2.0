@@ -1,4 +1,4 @@
-package br.gov.basis.taskmanager.taskbatch.security;
+package br.gov.basis.taskmanager.taskbatch.config.security;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
