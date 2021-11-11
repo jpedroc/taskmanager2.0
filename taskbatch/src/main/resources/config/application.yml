@@ -210,4 +210,7 @@ jhipster:
 # https://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
-# application:
+application:
+  try: 3
+  cron:
+    close-task-cron: 00 00 00 * * *

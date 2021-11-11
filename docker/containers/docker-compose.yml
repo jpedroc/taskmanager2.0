@@ -17,3 +17,9 @@ services:
       service: jhipster-registry
       file: jhipster-registry.yml
     container_name: taskmanager-registry
+
+  taskmanager-rabbit:
+    extends:
+      service: rabbitmq
+      file: rabbitmq.yml
+    container_name: taskmanager-rabbit

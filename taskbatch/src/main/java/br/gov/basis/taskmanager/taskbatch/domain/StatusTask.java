@@ -1,7 +1,6 @@
-package br.gov.basis.taskmanager.taskservice.domain;
+package br.gov.basis.taskmanager.taskbatch.domain;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -14,7 +13,6 @@ import java.io.Serializable;
 @Setter
 @Entity
 @Table(name = "status_task")
-@NoArgsConstructor
 public class StatusTask implements Serializable {
 
     @Id
@@ -22,8 +20,4 @@ public class StatusTask implements Serializable {
 
     @Column(name = "description", nullable = false)
     private String description;
-
-    public StatusTask(Integer id) {
-        this.id = id;
-    }
 }

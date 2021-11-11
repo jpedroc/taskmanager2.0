@@ -1,4 +1,4 @@
-package br.gov.basis.taskmanager.taskbatch.security;
+package br.gov.basis.taskmanager.taskbatch.config.security;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
